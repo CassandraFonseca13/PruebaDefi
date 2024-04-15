@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import WebSocket from "ws";
 
 import {FiSend} from "react-icons/fi"
 
@@ -9,7 +8,7 @@ function ChatWebSocket(){
     const [mensajes, setMensajes]= useState<String[]>([]);
     const [socket, setSocket] = useState<WebSocket | null>(null);
     useEffect(()=>{
-        const newSocket = new WebSocket ('ws://localhost:8085'); 
+        const newSocket = new WebSocket ('ws://localhost:8087'); 
         newSocket.onmessage=(event) => {
             event.data.text().then((text:string)=>{
                 console.log.apply(text);
@@ -50,7 +49,7 @@ function ChatWebSocket(){
                     setMensaje(evento.target.value)
                 }}
                 onKeyDown={(evento)=>{
-                if(evento.key == 'Enter'){
+                if(evento.key === 'Enter'){
                     mandarMensaje();
                 
                 }
