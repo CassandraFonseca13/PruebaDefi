@@ -51,7 +51,6 @@ function ChatWebSocket(){
                 onKeyDown={(evento)=>{
                 if(evento.key === 'Enter'){
                     mandarMensaje();
-                
                 }
             }}
                 ></input>
@@ -59,7 +58,6 @@ function ChatWebSocket(){
 
             </div>
         </div>
-
     );
 }
 export default ChatWebSocket;
