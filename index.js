@@ -11,7 +11,7 @@ ws.on('message', (data) =>{
     });
 });
 ws.on('close',()=>{
-    console.log('Usuario desconectado');
+    console.log('usuario desconectado');
 });
 });
-console.log('Server funcionando');
+console.log('server funcionando');
